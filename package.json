@@ -1,0 +1,14 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Udemy project - Making a calculator with server support",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jakob Albrechtsen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
