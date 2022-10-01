@@ -20,15 +20,15 @@ app.post("/", function (req, res) {
 });
 
 //SECTION Route for BMI calculator
-app.get("/bmicalculator", function (req, res) {
-    res.sendFile(__dirname + "/bmicalculator.html");
+app.get("/bmiCalculator", function (req, res) {
+    res.sendFile(__dirname + "/bmiCalculator.html");
 });
 
-app.post("/bmicalculator", function (req, res) {
-    let weight = Number(req.body.weight);
-    let height = Number(req.body.height);
+app.post("/bmiCalculator", function (req, res) {
+    let weight = parseFloat(req.body.weight);
+    let height = parseFloat(req.body.height);
 
-    let bmi = weight / Math.sqrt(height);
+    let bmi = weight / (height * height) * 1_000;
 
     res.send("You BMI is " + bmi);
 });
